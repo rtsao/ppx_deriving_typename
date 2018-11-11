@@ -4,8 +4,7 @@
   (public_name  ppx_deriving_typename)
   (synopsis "Ppx typename generator")
   (kind ppx_deriver)
-  (libraries (ppx_core ppx_type_conv ppx_driver))
-  (preprocess (pps (ppx_metaquot ppx_driver.runner)))
+  (libraries (ppxlib))
+  (preprocess (pps (ppxlib.metaquot ppxlib.runner)))
  )
 )
-
