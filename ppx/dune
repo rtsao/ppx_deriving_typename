@@ -1,0 +1,8 @@
+(library
+ (name ppx_deriving_typename)
+ (public_name  ppx_deriving_typename)
+ (synopsis "Ppx typename generator")
+ (kind ppx_deriver)
+ (libraries ppxlib)
+ (preprocess (pps ppxlib.metaquot ppxlib.runner))
+)

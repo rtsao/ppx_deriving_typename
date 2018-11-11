@@ -2,25 +2,24 @@ PPX_TYPENAME = _build/default/.ppx/ppx_deriving_typename+ppx_driver.runner/ppx.e
 
 .PHONY: build clean install uninstall reinstall test
 build:
-	jbuilder build @install --dev
+	dune build @install
 
 clean:
-	jbuilder clean
+	dune clean
 
 install:
-	jbuilder install
+	dune install
 
 uninstall:
-	jbuilder uninstall
+	dune uninstall
 
 reinstall: uninstall install
 
 test:
-	jbuilder runtest --dev
+	dune runtest
 
 test-source:
 	$(PPX_TYPENAME) test/run.ml
 
 
 all: build install test
-

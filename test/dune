@@ -1,0 +1,8 @@
+(executable
+ (name run)
+ (preprocess (pps ppx_deriving_typename ppxlib.runner))
+)
+(alias
+ (name runtest)
+ (action (run ./run.exe))
+)
